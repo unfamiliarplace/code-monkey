@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Code Monkey</title>
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+  </head>
+    
+  <body>
+  <div id='app'>
+  <div id='mainPanel'>
+    <div id='gamePanel' class='fullPanel'>
+      <div id='titlePanel'>
+        <h1 id='title'>Code Monkey</h1>
+      </div>
+      <div id='focusPanel' class='flexRow'>
+        <div id='playPanel' class='flexCol'>
+          <label for='input'>
+            <div id='promptPanel' class='flexRow'>
+              <div id='promptLabel' class='leftLabel'>>>></div>
+              <div id='prompt'></div>
+            </div>
+            <div id='inputPanel' class='flexRow'>
+              <div class='leftLabel' id='inputLabel'>>>></div>
+              <div contenteditable="true" id='input'></div><button id='btnSubmit' class='buttonBase buttonEffects hide' title='Submit your typing. Hotkey Enter'>Submit</button>
+            </div>
+            <div id='resultPanel'>
+              <div id='result'></div>
+            </div>
+          </label>
+          <div id='statsPanel' class='flexRow'>
+            <div class='statBlock flexCol' title='Number of prompts typed correctly'>
+              <div class='statLabel'>Successful prompts</div>
+              <div id='statPrompts' class='stat'>0</div>
+            </div>
+            <div class='statBlock flexCol' title='Number of characters typed'>
+              <div class='statLabel'>Total characters</div>
+              <div id='statCharacters' class='stat'>0</div>
+            </div>
+            <div class='statBlock flexCol' title='Average characters per second'>
+              <div class='statLabel'>CPS</div>
+              <div id='statCPS' class='stat'>0</div>
+            </div>
+
+            <div class='statBlock flexCol' title='Number of failures over number of attempts'>
+              <div class='statLabel'>Accuracy</div>
+              <div id='statAccuracy' class='stat'>100%</div>
+            </div>
+          </div>
+          <hr />
+          <div id='optionsPanel' class='flexCol'>
+            <div id='lineFeaturesPanel' class='flexRow featuresPanel'></div>
+            <div id='lineFeaturesControlPanel' class='flexRow controlPanel'>
+              <button id='btnAllLineFeatures' class='buttonBase buttonEffects control'>All</button>
+              <button id='btnNoLineFeatures' class='buttonBase buttonEffects control'>None</button>
+            </div>
+            <div id='componentFeaturesPanel' class='flexRow featuresPanel'></div>
+            <div id='componentFeaturesControlPanel' class='flexRow controlPanel'>
+              <button id='btnAllComponentFeatures' class='buttonBase buttonEffects control'>All</button>
+              <button id='btnNoComponentFeatures' class='buttonBase buttonEffects control'>None</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="helpPanel" class="hide fullPanel verticalPanel overlayPanel">
+      <div id="helpContent" class="panelContent">
+        <h1>Help</h1>
+        <hr />
+        <p>Coming soon</p>
+      </div>
+    </div>
+  </div>
+  <div id='footer'>
+    <div id='footerContent'>
+      <div class='footerBlock' id='footerLeft'>
+        <div id='resetButtonContainer'><button id='btnReset' class='buttonBase buttonEffects buttonFooter' title='Reset all settings'>Reset</button></div>
+        <div id='restartButtonContainer'><button id='btnRestart' class='buttonBase buttonEffects buttonFooter' title='Restart stats'>Restart</button></div>
+
+      </div>
+      <div class='footerBlock' id='footerRight'>
+        <div id='helpButtonContainer'>
+          <button id='btnHelp' class='buttonBase buttonEffects buttonFooter' title='Show/hide help panel'>Help</button>
+        </div>
+        <div id="copyrightContainer">
+          <div id="copyright">© 2023 <a href="https://sawczak.com">Luke Sawczak</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script src='https://t.sawczak.com/common/includes/misc/app-tools.js'></script>
+<script src='https://t.sawczak.com/common/includes/misc/jquery-ui-options.js'></script>
+<script src='https://t.sawczak.com/common/includes/lz-string/lz-string.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/unfamiliarplace/python-generator/pg/__target__/pg.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vanilla-caret-js@1.1.0/dist/VanillaCaret.min.js'></script>
+
+  <script type="module" src="./script.js"></script>
+
+  </body>
+  
+</html>
