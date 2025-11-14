@@ -375,11 +375,8 @@ const reset = () => {
 };
 
 const addScenes = () => {
-  stage.addScene(
-    new _Scene("game", "#gamePanel", "", [$("#gamePanel button")])
-  );
-  stage.addScene(new _Scene("help", "#helpPanel", "#btnHelp", []));
-
+  stage.createScene("game", "#gamePanel");
+  stage.createScene("help", "#helpPanel", "#btnHelp");
   stage.setDefault("game");
 };
 
@@ -431,7 +428,7 @@ const bind = () => {
 };
 
 const initialize = () => {
-  stage = new _Stage();
+  stage = new Stage();
   caret = new VanillaCaret(document.getElementById("input"));
   createFeatures();
   bind();
